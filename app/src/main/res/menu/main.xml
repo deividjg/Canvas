@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/restablecer"
+        android:orderInCategory="100"
+        android:title="home"
+        android:icon="@android:drawable/ic_notification_clear_all"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/guardar"
+        android:orderInCategory="100"
+        android:title="recargar"
+        android:icon="@android:drawable/ic_menu_save"
+        app:showAsAction="always" />
+</menu>
