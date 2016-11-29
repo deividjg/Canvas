@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/libre"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Dibujo libre" />
-        <item
-            android:id="@+id/colores"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Colores" />
-        <item
-            android:id="@+id/triangulos"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Triangulos" />
-        <item
-            android:id="@+id/circulos"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Circulos" />
-        <item
-            android:id="@+id/cuadrados"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Cuadrados" />
-    </group>
-
-    <item android:title="Communicate">
+    <item android:title="Formas">
         <menu>
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/libre"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="Estilo Libre" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/cuadrado"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="Cuadrado" />
+            <item
+                android:id="@+id/circulo"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Circulo" />
+        </menu>
+    </item>
+
+    <item android:title="Colores">
+        <menu>
+            <item
+                android:id="@+id/rojo"
+                android:icon="@mipmap/rojo"
+                android:title="Rojo" />
+            <item
+                android:id="@+id/verde"
+                android:icon="@mipmap/verde"
+                android:title="Verde" />
+            <item
+                android:id="@+id/azul"
+                android:icon="@mipmap/azul"
+                android:title="Azul" />
+            <item
+                android:id="@+id/negro"
+                android:icon="@mipmap/negro"
+                android:title="Negro" />
         </menu>
     </item>
 

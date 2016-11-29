@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity
 
     RelativeLayout layout1;
     Pintar pintar;
-    char color = 'b';
+    char color = 'n';
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity
         layout1 = (RelativeLayout) findViewById(R.id.content_main);
         pintar = new Pintar(this);
         layout1.addView(pintar);
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -78,10 +77,11 @@ public class MainActivity extends AppCompatActivity
             layout1.removeAllViews();
             pintar = new Pintar(this);
             layout1.addView(pintar);
+
         }
 
         if (id == R.id.guardar) {
-            color = 'r';
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -95,14 +95,18 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.libre) {
             // Handle the camera action
-        } else if (id == R.id.colores) {
+        } else if (id == R.id.cuadrado) {
 
-        } else if (id == R.id.triangulos) {
+        } else if (id == R.id.circulo) {
 
-        } else if (id == R.id.circulos) {
-
-        } else if (id == R.id.cuadrados) {
-
+        } else if (id == R.id.rojo) {
+            color = 'r';
+        } else if (id == R.id.verde) {
+            color = 'v';
+        } else if (id == R.id.azul) {
+            color = 'a';
+        } else if (id == R.id.negro) {
+            color = 'n';
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -139,11 +143,13 @@ public class MainActivity extends AppCompatActivity
 
         public int color(){
             switch (color){
-                case 'b': return Color.BLUE;
+                case 'a': return Color.BLUE;
                 case 'r': return Color.RED;
+                case 'v': return Color.GREEN;
                 default: return Color.BLACK;
             }
         }
+
 
         public boolean onTouchEvent(MotionEvent e) {
             x = e.getX();
