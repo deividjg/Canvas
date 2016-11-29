@@ -1,16 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/restablecer"
-        android:orderInCategory="100"
-        android:title="home"
-        android:icon="@android:drawable/ic_notification_clear_all"
-        app:showAsAction="always" />
-    <item
-        android:id="@+id/guardar"
-        android:orderInCategory="100"
-        android:title="recargar"
-        android:icon="@android:drawable/ic_menu_save"
-        app:showAsAction="always" />
+    <item android:title="Color"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/rojo"
+                android:icon="@mipmap/rojo"
+                android:title="Rojo" />
+            <item
+                android:id="@+id/verde"
+                android:icon="@mipmap/verde"
+                android:title="Verde" />
+            <item
+                android:id="@+id/azul"
+                android:icon="@mipmap/azul"
+                android:title="Azul" />
+            <item
+                android:id="@+id/negro"
+                android:icon="@mipmap/negro"
+                android:title="Negro" />
+        </menu>
+    </item>
+
+    <item android:title="Pincel"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/fino"
+                android:title="Fino" />
+            <item
+                android:id="@+id/medio"
+                android:title="Medio" />
+            <item
+                android:id="@+id/grueso"
+                android:title="Grueso" />
+        </menu>
+    </item>
+
+    <item android:title="Fondo"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/fBlanco"
+                android:orderInCategory="100"
+                android:icon="@android:color/white"
+                android:title="Blanco" />
+            <item
+                android:id="@+id/fNegro"
+                android:orderInCategory="100"
+                android:icon="@android:color/black"
+                android:title="Negro" />
+            <item
+                android:id="@+id/fRojo"
+                android:orderInCategory="100"
+                android:icon="@android:color/holo_red_dark"
+                android:title="Rojo" />
+            <item
+                android:id="@+id/fVerde"
+                android:orderInCategory="100"
+                android:icon="@android:color/holo_green_light"
+                android:title="Verde" />
+            <item
+                android:id="@+id/fAzul"
+                android:orderInCategory="100"
+                android:icon="@android:color/holo_blue_light"
+                android:title="Azul" />
+        </menu>
+    </item>
 </menu>

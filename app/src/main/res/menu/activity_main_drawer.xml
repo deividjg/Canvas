@@ -18,25 +18,14 @@
         </menu>
     </item>
 
-    <item android:title="Colores">
-        <menu>
-            <item
-                android:id="@+id/rojo"
-                android:icon="@mipmap/rojo"
-                android:title="Rojo" />
-            <item
-                android:id="@+id/verde"
-                android:icon="@mipmap/verde"
-                android:title="Verde" />
-            <item
-                android:id="@+id/azul"
-                android:icon="@mipmap/azul"
-                android:title="Azul" />
-            <item
-                android:id="@+id/negro"
-                android:icon="@mipmap/negro"
-                android:title="Negro" />
-        </menu>
-    </item>
-
+    <item
+        android:id="@+id/restablecer"
+        android:orderInCategory="100"
+        android:title="Restablecer"
+        android:icon="@android:drawable/ic_notification_clear_all" />
+    <item
+        android:id="@+id/salir"
+        android:orderInCategory="100"
+        android:title="Salir"
+        android:icon="@android:drawable/ic_delete" />
 </menu>
