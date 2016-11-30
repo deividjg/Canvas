@@ -153,6 +153,7 @@ public class MainActivity extends AppCompatActivity
             layout1.addView(pintarVerde);
             layout1.addView(pintarAzul);
             layout1.addView(pintarNegro);
+            figura = "libre";
         } else if (id == R.id.salir) {
             System.exit(0);
         } else if (id == R.id.circulo) {

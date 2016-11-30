@@ -49,22 +49,22 @@
             <item
                 android:id="@+id/fNegro"
                 android:orderInCategory="100"
-                android:icon="@android:color/black"
+                android:icon="@mipmap/negro"
                 android:title="Negro" />
             <item
                 android:id="@+id/fRojo"
                 android:orderInCategory="100"
-                android:icon="@android:color/holo_red_dark"
+                android:icon="@mipmap/rojo"
                 android:title="Rojo" />
             <item
                 android:id="@+id/fVerde"
                 android:orderInCategory="100"
-                android:icon="@android:color/holo_green_light"
+                android:icon="@mipmap/verde"
                 android:title="Verde" />
             <item
                 android:id="@+id/fAzul"
                 android:orderInCategory="100"
-                android:icon="@android:color/holo_blue_light"
+                android:icon="@mipmap/azul"
                 android:title="Azul" />
         </menu>
     </item>
