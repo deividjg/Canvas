@@ -8,6 +8,7 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.MotionEvent;
@@ -20,7 +21,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -31,12 +34,20 @@ public class MainActivity extends AppCompatActivity
     int grosor = 5;
     String figura = "libre";
 
+    ProgressBar pb;
+    int mProgressStatus = 0;
+    Handler mHandler = new Handler();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        pb = (ProgressBar)findViewById(R.id.progressBar);
+        pb.setMax(20000);
+        pb.setVisibility(View.INVISIBLE);
 
         layout1 = (RelativeLayout) findViewById(R.id.content_main);
         pintarNegro = new Pintar(this);
@@ -56,6 +67,8 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
     }
 
     @Override
@@ -155,7 +168,7 @@ public class MainActivity extends AppCompatActivity
             layout1.addView(pintarNegro);
             figura = "libre";
         } else if (id == R.id.salir) {
-            System.exit(0);
+            salir();
         } else if (id == R.id.circulo) {
             figura = "circulo";
         } else if (id == R.id.cuadrado) {
@@ -167,6 +180,26 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void salir(){
+        pb.setVisibility(View.VISIBLE);
+        Toast.makeText(getApplicationContext(), "Saliendo de la aplicación", Toast.LENGTH_SHORT).show();
+        new Thread(new Runnable() {
+            public void run() {
+                while (mProgressStatus < 20000) {
+                    mProgressStatus += 1;
+                    // Update the progress bar
+                    mHandler.post(new Runnable() {
+                        public void run() {
+                            pb.setProgress(mProgressStatus);
+                        }
+                    });
+                }
+                System.exit(0);
+            }
+        }).start();
+
     }
 
     class Pintar extends View {
