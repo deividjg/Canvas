@@ -199,6 +199,16 @@ public class MainActivity extends AppCompatActivity
                 System.exit(0);
             }
         }).start();
+    }
+
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+
+
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
 
     }
 
